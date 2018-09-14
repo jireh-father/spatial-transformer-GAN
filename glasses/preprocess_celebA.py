@@ -1,7 +1,7 @@
 import numpy as np
 import scipy.misc
 
-celebA_path = "D:\data\celeba"
+celebA_path = "/home/data/celeba"
 output_path = "dataset_b"
 
 part_dict = {}
