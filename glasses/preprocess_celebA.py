@@ -29,7 +29,7 @@ for type in ["train", "test"]:
     attributes = np.ones([count, 40], dtype=np.bool)
     for i in range(len(L)):
         key = L[i]
-        img = scipy.misc.imread("{0}/img_align_celeba_png/{1}".format(celebA_path, key[:-4] + ".jpg"))
+        img = scipy.misc.imread("{0}/img_align_celeba_png/{1}".format(celebA_path, key[:-4] + ".png"))
         images[i] = img
         attr = [True if e == "1" else False for e in attr_dict[key]]
         attributes[i] = attr
