@@ -2,7 +2,7 @@ import numpy as np
 import scipy.misc
 
 celebA_path = "/home/data/celeba"
-output_path = "dataset_b"
+output_path = "datasets"
 
 part_dict = {}
 with open("{0}/list_eval_partition.txt".format(celebA_path)) as file:
@@ -29,7 +29,7 @@ for type in ["train", "test"]:
     attributes = np.ones([count, 40], dtype=np.bool)
     for i in range(len(L)):
         key = L[i]
-        img = scipy.misc.imread("{0}/img_align_celeba/{1}".format(celebA_path, key[:-4] + ".jpg"))
+        img = scipy.misc.imread("{0}/img_align_celeba_png/{1}".format(celebA_path, key[:-4] + ".jpg"))
         images[i] = img
         attr = [True if e == "1" else False for e in attr_dict[key]]
         attributes[i] = attr
